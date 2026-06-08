@@ -1,0 +1,62 @@
+{
+  "name": "skgl-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack:mac": "electron-builder --mac dir",
+    "dist:mac": "electron-builder --mac zip"
+  },
+  "build": {
+    "appId": "cn.skgl.desktop",
+    "productName": "记账客户管理系统",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../index.html",
+        "to": "app/index.html"
+      },
+      {
+        "from": "../xlsx.min.js",
+        "to": "app/xlsx.min.js"
+      },
+      {
+        "from": "../icon_1024.png",
+        "to": "app/icon_1024.png"
+      },
+      {
+        "from": "../icon.icns",
+        "to": "app/icon.icns"
+      },
+      {
+        "from": "../wechat-service-qr.png",
+        "to": "app/wechat-service-qr.png"
+      },
+      {
+        "from": "../functions",
+        "to": "app/functions"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.business",
+      "target": [
+        "dir",
+        "zip"
+      ],
+      "icon": "../icon.icns"
+    }
+  },
+  "devDependencies": {
+    "electron": "^42.3.3",
+    "electron-builder": "^26.0.12"
+  }
+}

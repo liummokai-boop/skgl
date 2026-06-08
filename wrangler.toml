@@ -1,0 +1,8 @@
+name = "skgl"
+compatibility_date = "2026-05-27"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "skgl-db"
+database_id = "d754aa76-a5af-4626-af2f-bf8aa589ba16"

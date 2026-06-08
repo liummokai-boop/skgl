@@ -1,0 +1,15 @@
+{
+  "name": "kehuguanli",
+  "version": "1.0.0",
+  "main": "xlsx.min.js",
+  "scripts": {
+    "test": "node --check functions/api/[[path]].js && node --check functions/api/auth.js && node --check functions/api/all.js && node --check functions/api/masters.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "acorn": "^8.16.0"
+  }
+}
